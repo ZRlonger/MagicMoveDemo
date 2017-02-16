@@ -7,8 +7,6 @@
 //
 
 #import <UIKit/UIKit.h>
-//UIKIT_EXTERN NSString *const kXWMagicMoveAnimatorStartViewVCKey;
-//UIKIT_EXTERN NSString *const kXWMagicMoveAnimatorEndViewVCKey;
 
 @interface MagicMoveTransition : NSObject<UIViewControllerAnimatedTransitioning,UINavigationControllerDelegate>
 

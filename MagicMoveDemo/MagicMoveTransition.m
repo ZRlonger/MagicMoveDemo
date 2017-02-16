@@ -9,6 +9,11 @@
 #import "MagicMoveTransition.h"
 #import <objc/runtime.h>
 #import "UIViewController+JXViewController.h"
+#import "SecondViewController.h"
+
+@interface MagicMoveTransition()
+@property(strong,nonatomic) UIViewController *toViewController;
+@end
 
 @implementation MagicMoveTransition
 
@@ -19,6 +24,11 @@
 - (void)animateTransition:(id<UIViewControllerContextTransitioning>)transitionContext {
     UIViewController *fromVC = [transitionContext viewControllerForKey:UITransitionContextFromViewControllerKey];
     UIViewController *toVC = [transitionContext viewControllerForKey:UITransitionContextToViewControllerKey];
+    
+    if (_toViewController == nil) {
+        _toViewController = toVC;
+    }
+    
     UIView *containerView = [transitionContext containerView];
     NSTimeInterval duration = [self transitionDuration:transitionContext];
     
@@ -76,12 +86,21 @@
     return self;
 }
 
+-(id<UIViewControllerInteractiveTransitioning>)navigationController:(UINavigationController *)navigationController interactionControllerForAnimationController:(id<UIViewControllerAnimatedTransitioning>)animationController{
+   
+    UIPercentDrivenInteractiveTransition *interactivePopTransition =objc_getAssociatedObject(_toViewController, &aaa);
+
+    if (_toViewController != nil) {
+    return interactivePopTransition;
+    }
+    return nil;
+}
+
+
 -(void)dealloc{
     NSLog(@"tra dealloc");
 }
 
-//NSString *const kXWMagicMoveAnimatorStartViewVCKey = @"kXWMagicMoveAnimatorStartViewVCKey";
-//NSString *const kXWMagicMoveAnimatorEndViewVCKey = @"kXWMagicMoveAnimatorEndViewVCKey";
 
 
 @end

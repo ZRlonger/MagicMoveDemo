@@ -11,7 +11,10 @@
 #import "MagicMoveTransition.h"
 #import "UINavigationController+JXNavigationController.h"
 #import "UIViewController+JXViewController.h"
+@interface ViewController ()
 
+@property(nonatomic,strong) MagicMoveTransition *magicMove;
+@end
 @implementation ViewController
 
 - (void)viewDidLoad {
@@ -37,8 +40,8 @@
 
 -(void)click{
     SecondViewController *vc = [[SecondViewController alloc] init];
-    MagicMoveTransition *magicMove = [[MagicMoveTransition alloc] init];
-    [self.navigationController pushViewController:vc animated:YES transition:magicMove];
+    _magicMove = [[MagicMoveTransition alloc] init];
+    [self.navigationController pushViewController:vc animated:YES transition:_magicMove];
 }
 
 

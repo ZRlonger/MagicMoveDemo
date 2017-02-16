@@ -34,11 +34,10 @@
 
     if(self.topViewController == magicToVC){
         self.delegate = transition;
-        objc_setAssociatedObject(self, &kJXMagicMoveAnimatorTransitionKey, nil, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+//        objc_setAssociatedObject(self, &kJXMagicMoveAnimatorTransitionKey, nil, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
     }
     
     UIViewController *popVC = [self jxPopViewControllerAnimated:animated];
-    NSLog(@"self: %@  self.delegate 1:%@",self, self.delegate);
     return popVC;
 }
 

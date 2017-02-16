@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
+UIKIT_EXTERN NSString *const kJXMagicMoveAnimatorTransitionKey;
+
 @interface UINavigationController (JXNavigationController)
 
 -(void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated transition:(id<UINavigationControllerDelegate,UIViewControllerAnimatedTransitioning>)transition;

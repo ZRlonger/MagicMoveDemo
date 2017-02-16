@@ -10,6 +10,7 @@
 
 UIKIT_EXTERN NSString *const kJXMagicMoveAnimatorStartViewVCKey;
 UIKIT_EXTERN NSString *const kJXMagicMoveAnimatorEndViewVCKey;
+UIKIT_EXTERN NSString *const aaa;
 
 @interface UIViewController (JXViewController)
 
