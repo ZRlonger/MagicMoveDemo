@@ -8,9 +8,8 @@
 
 #import "SecondViewController.h"
 #import "MagicMoveTransition.h"
-#import <objc/runtime.h>
 #import "UIViewController+JXViewController.h"
-#import "ThirdViewController.h"
+//#import "ThirdViewController.h"
 
 @interface SecondViewController ()
 
@@ -28,14 +27,6 @@
 //        [self.navigationController pushViewController:vc animated:YES];
 //    });
     self.navigationController.interactivePopGestureRecognizer.enabled = NO;
-    
-//    UIScreenEdgePanGestureRecognizer *popRecognizer = [[UIScreenEdgePanGestureRecognizer alloc] initWithTarget:self action:@selector(handlePopRecognizer:)];
-//    popRecognizer.edges = UIRectEdgeLeft;
-//    [self.view addGestureRecognizer:popRecognizer];
-}
-
--(void)click{
-    NSLog(@"1111");
 }
 
 -(void)dealloc{
@@ -61,33 +52,4 @@
     
 }
 
-//-(void)handlePopRecognizer:(UIScreenEdgePanGestureRecognizer*)recognizer{
-//    //计算用户拖动距离
-//    CGFloat progress = [recognizer translationInView:self.view].x / (self.view.bounds.size.width * 1.0);
-//    progress = MIN(1.0, MAX(0.0, progress));
-//    NSLog(@"progress:%f",progress);
-//    if (recognizer.state == UIGestureRecognizerStateBegan) {
-//        self.interactivePopTransition = [[UIPercentDrivenInteractiveTransition alloc] init];
-//        [self.navigationController popViewControllerAnimated:YES];
-//    }
-//    else if(recognizer.state == UIGestureRecognizerStateChanged){
-//        [self.interactivePopTransition updateInteractiveTransition:progress];
-//    }
-//    else if(recognizer.state == UIGestureRecognizerStateEnded || recognizer.state == UIGestureRecognizerStateCancelled){
-//        if (progress > 0.5) {
-//            [self.interactivePopTransition finishInteractiveTransition];
-//        }else{
-//            [self.interactivePopTransition cancelInteractiveTransition];
-//        }
-//    
-//        self.interactivePopTransition = nil;
-//    }
-//}
-
-//-(id<UIViewControllerInteractiveTransitioning>)navigationController:(UINavigationController *)navigationController interactionControllerForAnimationController:(id<UIViewControllerAnimatedTransitioning>)animationController{
-//    if ([animationController isKindOfClass:[self class]]) {
-//        return self.interactivePopTransition;
-//    }
-//    return nil;
-//}
 @end

@@ -28,10 +28,6 @@
     }
 }
 
-//-(void)jx_setInteractive{
-//    objc_setAssociatedObject(self, &aaa, self, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
-//}
-
 - (void)handlePopRecognizer:(UIScreenEdgePanGestureRecognizer*)recognizer {
     // Calculate how far the user has dragged across the view
     CGFloat progress = [recognizer translationInView:self.view].x / (self.view.bounds.size.width * 1.0);

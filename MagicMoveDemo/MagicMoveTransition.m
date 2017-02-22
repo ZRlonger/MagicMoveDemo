@@ -54,7 +54,7 @@
     NSMutableArray<UIView *> *snapshots = [NSMutableArray array];
     for (UIView *view in startViewGroup) {
         UIView *imageSnapshot = [view snapshotViewAfterScreenUpdates:NO];
-        imageSnapshot.frame = [toVC.view convertRect:view.frame toView:containerView];
+        imageSnapshot.frame = [containerView convertRect:view.frame fromView:view.superview];
         [containerView addSubview:imageSnapshot];
         [snapshots addObject:imageSnapshot];
     }
@@ -62,7 +62,7 @@
     [UIView animateWithDuration:duration animations:^{
         toVC.view.alpha = 1.0;
         for (int i=0; i<snapshots.count; i++) {
-            CGRect frame = [containerView convertRect:[endViewGroup objectAtIndex:i].frame fromView:toVC.view];
+            CGRect frame = [containerView convertRect:[endViewGroup objectAtIndex:i].frame fromView:[endViewGroup objectAtIndex:i].superview];
             [snapshots objectAtIndex:i].frame = frame;
         }
     }completion:^(BOOL finished) {
