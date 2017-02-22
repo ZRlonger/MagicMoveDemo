@@ -4,7 +4,8 @@
 //
 //  Created by pconline on 2017/1/25.
 //  Copyright © 2017年 pconline. All rights reserved.
-//
+//  最新代码：https://github.com/dolacmeng/MagicMoveDemo
+//  Blog文章：http://blog.csdn.net/dolacmeng/article/details/56485140
 
 #import "ViewController.h"
 #import "SecondViewController.h"
