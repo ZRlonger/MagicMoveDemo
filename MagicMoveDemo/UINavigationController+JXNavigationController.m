@@ -11,7 +11,6 @@
 #import <objc/runtime.h>
 
 @implementation UINavigationController (JXNavigationController)
-
 + (void)load{
     method_exchangeImplementations(class_getInstanceMethod([self class], @selector(popViewControllerAnimated:)), class_getInstanceMethod([self class], @selector(jxPopViewControllerAnimated:)));
 }
@@ -23,7 +22,7 @@
         objc_setAssociatedObject(self, &kJXMagicMoveAnimatorTransitionKey, transition, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
     }
     [self pushViewController:viewController animated:animated];
-    self.delegate = nil;
+    self.delegate = self;
 }
 
 

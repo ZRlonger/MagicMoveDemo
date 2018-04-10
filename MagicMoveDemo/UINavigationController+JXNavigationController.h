@@ -10,7 +10,8 @@
 
 UIKIT_EXTERN NSString *const kJXMagicMoveAnimatorTransitionKey;
 
-@interface UINavigationController (JXNavigationController)
+@interface UINavigationController (JXNavigationController)<UINavigationControllerDelegate>
+
 
 -(void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated transition:(id<UINavigationControllerDelegate,UIViewControllerAnimatedTransitioning>)transition;
 

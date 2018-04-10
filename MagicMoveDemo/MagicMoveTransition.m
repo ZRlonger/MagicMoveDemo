@@ -9,7 +9,6 @@
 #import "MagicMoveTransition.h"
 #import <objc/runtime.h>
 #import "UIViewController+JXViewController.h"
-#import "SecondViewController.h"
 
 @interface MagicMoveTransition()
 @property(strong,nonatomic) UIViewController *toViewController;
