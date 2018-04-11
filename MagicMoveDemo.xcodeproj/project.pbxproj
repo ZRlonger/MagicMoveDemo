@@ -93,19 +93,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		323507661E5D64C70050A44A /* JXMagicMove */ = {
-			isa = PBXGroup;
-			children = (
-				32A820941E38926000508B7D /* MagicMoveTransition.h */,
-				32A820951E38926000508B7D /* MagicMoveTransition.m */,
-				32BDCCC01E3EC60100F0B504 /* UINavigationController+JXNavigationController.h */,
-				32BDCCC11E3EC60100F0B504 /* UINavigationController+JXNavigationController.m */,
-				3205C5221E44697E00D3B0BA /* UIViewController+JXViewController.h */,
-				3205C5231E44697E00D3B0BA /* UIViewController+JXViewController.m */,
-			);
-			name = JXMagicMove;
-			sourceTree = "<group>";
-		};
 		32A820551E387D0E00508B7D = {
 			isa = PBXGroup;
 			children = (
@@ -129,7 +116,7 @@
 		32A820601E387D0E00508B7D /* MagicMoveDemo */ = {
 			isa = PBXGroup;
 			children = (
-				323507661E5D64C70050A44A /* JXMagicMove */,
+				B5D1EE26207D9A5000AF6208 /* JXMagicMove */,
 				32A820641E387D0E00508B7D /* AppDelegate.h */,
 				32A820651E387D0E00508B7D /* AppDelegate.m */,
 				32A820671E387D0E00508B7D /* ViewController.h */,
@@ -171,6 +158,19 @@
 				32A820881E387D0E00508B7D /* Info.plist */,
 			);
 			path = MagicMoveDemoUITests;
+			sourceTree = "<group>";
+		};
+		B5D1EE26207D9A5000AF6208 /* JXMagicMove */ = {
+			isa = PBXGroup;
+			children = (
+				32A820941E38926000508B7D /* MagicMoveTransition.h */,
+				32A820951E38926000508B7D /* MagicMoveTransition.m */,
+				32BDCCC01E3EC60100F0B504 /* UINavigationController+JXNavigationController.h */,
+				32BDCCC11E3EC60100F0B504 /* UINavigationController+JXNavigationController.m */,
+				3205C5221E44697E00D3B0BA /* UIViewController+JXViewController.h */,
+				3205C5231E44697E00D3B0BA /* UIViewController+JXViewController.m */,
+			);
+			path = JXMagicMove;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
